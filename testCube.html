@@ -3,13 +3,9 @@
 
 <head>
 <script>
-function myFunction() {
-    // Code for Chrome, Safari, Opera
-    document.getElementById("triTest").style.WebkitTransform = "rotate(20deg)"; 
-    // Code for IE9
-    document.getElementById("triTest").style.msTransform = "rotate(20deg)"; 
-    // Standard syntax
-    document.getElementById("triTest").style.transform = "rotate(20deg)"; 
+function folds() {
+document.getElementById("triHolder").style.perspective = "500px"; 
+
 }
 </script>
 <style>
@@ -23,7 +19,7 @@ border-bottom: 100px solid red;
 margin-left:100px;
 position: absolute;
 z-index:1;
- <!---webkit-transform: perspective(400px) rotateX(25deg)-->
+<!---webkit-transform: perspective(400px) rotateX(25deg)-->
 }
 #triTest3{
 width: 0;
@@ -34,14 +30,14 @@ border-right: 50px solid transparent;
 border-bottom: 100px solid pink;
 position: absolute;
 margin-left:100px;
-margin-top:200px;
+margin-top:198px;
 z-index:1;
 -webkit-transform: rotate(180deg);
-    -moz-transform: rotate(180deg);
-    -o-transform: rotate(180deg);
-    -ms-transform: rotate(180deg);
-    transform: rotate(180deg);
- <!---webkit-transform: perspective(400px) rotateX(25deg)-->
+-moz-transform: rotate(180deg);
+-o-transform: rotate(180deg);
+-ms-transform: rotate(180deg);
+transform: rotate(180deg);
+<!---webkit-transform: perspective(400px) rotateX(25deg)-->
 }
 #triTest4{
 width: 0;
@@ -54,12 +50,12 @@ position: absolute;
 z-index:1;
 margin-left:0px;
 margin-top:99px;
- <!---webkit-transform: perspective(400px) rotateX(25deg)-->
+<!---webkit-transform: perspective(400px) rotateX(25deg)-->
 -webkit-transform: rotate(270deg);
-    -moz-transform: rotate(270deg);
-    -o-transform: rotate(270deg);
-    -ms-transform: rotate(1270deg);
-    transform: rotate(270deg);
+-moz-transform: rotate(270deg);
+-o-transform: rotate(270deg);
+-ms-transform: rotate(1270deg);
+transform: rotate(270deg);
 }
 #triTest2{
 width: 0;
@@ -72,12 +68,12 @@ position: absolute;
 z-index:1;
 margin-left:200px;
 margin-top:99px;
- <!---webkit-transform: perspective(400px) rotateX(25deg)-->
+<!---webkit-transform: perspective(400px) rotateX(25deg)-->
 -webkit-transform: rotate(90deg);
-    -moz-transform: rotate(90deg);
-    -o-transform: rotate(90deg);
-    -ms-transform: rotate(90deg);
-    transform: rotate(90deg);
+-moz-transform: rotate(90deg);
+-o-transform: rotate(90deg);
+-ms-transform: rotate(90deg);
+transform: rotate(90deg);
 }
 #triTest, #triTest2,#triTest3, #triTest4{
 color: white;
@@ -96,13 +92,15 @@ line-height: 100px;
 
 </style>
 </head>
-<button onclick="myFunction()">Try it</button>
+<button onclick="folds()">Unfold</button>
 <body>
-<div id="triTest" onclick="myFunction()" >1</div>
-<div id="triTest2" onclick="myFunction()" >2</div>
+<div id="triHolder">
+<div id="triTest" >1</div>
+<div id="triTest2">2</div>
 <div id="base"> <center>Base</center></div>
 <div id="triTest3" onclick="myFunction()" >3</div>
 <div id="triTest4" onclick="myFunction()" >4</div>
+</div>
 </body>
 
 

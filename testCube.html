@@ -20,8 +20,46 @@ line-height:120px;
 border-left: 50px solid transparent;
 border-right: 50px solid transparent;
 border-bottom: 100px solid red;
+margin-left:100px;
 position: absolute;
 z-index:1;
+ <!---webkit-transform: perspective(400px) rotateX(25deg)-->
+}
+#triTest3{
+width: 0;
+height: 0;
+line-height:120px;
+border-left: 50px solid transparent;
+border-right: 50px solid transparent;
+border-bottom: 100px solid pink;
+position: absolute;
+margin-left:100px;
+margin-top:200px;
+z-index:1;
+-webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    transform: rotate(180deg);
+ <!---webkit-transform: perspective(400px) rotateX(25deg)-->
+}
+#triTest4{
+width: 0;
+height: 0;
+line-height:120px;
+border-left: 50px solid transparent;
+border-right: 50px solid transparent;
+border-bottom: 100px solid brown;
+position: absolute;
+z-index:1;
+margin-left:0px;
+margin-top:99px;
+ <!---webkit-transform: perspective(400px) rotateX(25deg)-->
+-webkit-transform: rotate(270deg);
+    -moz-transform: rotate(270deg);
+    -o-transform: rotate(270deg);
+    -ms-transform: rotate(1270deg);
+    transform: rotate(270deg);
 }
 #triTest2{
 width: 0;
@@ -32,12 +70,29 @@ border-right: 50px solid transparent;
 border-bottom: 100px solid darkred;
 position: absolute;
 z-index:1;
-margin-left:50px;
--webkit-transform:
+margin-left:200px;
+margin-top:99px;
+ <!---webkit-transform: perspective(400px) rotateX(25deg)-->
+-webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    transform: rotate(90deg);
 }
-<!---webkit-transform: rotateX(150deg); /* Safari */
-transform: rotateX(150deg);
--->
+#triTest, #triTest2,#triTest3, #triTest4{
+color: white;
+}
+#base{
+width:100px;
+height: 100px;
+color:white;
+background-color: black;
+z-index:1;
+position:absolute;
+margin-top:98px;
+margin-left:100px;
+line-height: 100px;
+}
 
 </style>
 </head>
@@ -45,6 +100,9 @@ transform: rotateX(150deg);
 <body>
 <div id="triTest" onclick="myFunction()" >1</div>
 <div id="triTest2" onclick="myFunction()" >2</div>
+<div id="base"> <center>Base</center></div>
+<div id="triTest3" onclick="myFunction()" >3</div>
+<div id="triTest4" onclick="myFunction()" >4</div>
 </body>
 
 

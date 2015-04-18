@@ -3,6 +3,14 @@
 
 <head>
 <script>
+function myFunction() {
+    // Code for Chrome, Safari, Opera
+    document.getElementById("triTest").style.WebkitTransform = "rotate(20deg)"; 
+    // Code for IE9
+    document.getElementById("triTest").style.msTransform = "rotate(20deg)"; 
+    // Standard syntax
+    document.getElementById("triTest").style.transform = "rotate(20deg)"; 
+}
 </script>
 <style>
 #triTest{
@@ -11,13 +19,32 @@ height: 0;
 line-height:120px;
 border-left: 50px solid transparent;
 border-right: 50px solid transparent;
-border-bottom: 100px solid red
+border-bottom: 100px solid red;
+position: absolute;
+z-index:1;
 }
+#triTest2{
+width: 0;
+height: 0;
+line-height:120px;
+border-left: 50px solid transparent;
+border-right: 50px solid transparent;
+border-bottom: 100px solid darkred;
+position: absolute;
+z-index:1;
+margin-left:50px;
+-webkit-transform:
+}
+<!---webkit-transform: rotateX(150deg); /* Safari */
+transform: rotateX(150deg);
+-->
+
 </style>
 </head>
-
+<button onclick="myFunction()">Try it</button>
 <body>
-<div id="triTest">1</div>
+<div id="triTest" onclick="myFunction()" >1</div>
+<div id="triTest2" onclick="myFunction()" >2</div>
 </body>
 
 

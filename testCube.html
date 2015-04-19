@@ -1,69 +1,80 @@
 <!doctype html>
+
 <html>
+
 
 <head>
 <script>
-function folds() {
-document.getElementById("triHolder").style.perspective = "500px"; 
+function rotate(){
+document.getElementById("triTest").style.WebkitTransform = "rotateX(-5deg)";
+document.getElementById("triTest").style.WebkitTransform="translate(0px, -205px)";
+document.getElementById("triTest3").style.WebkitTransform = "rotateX(100deg)";
+document.getElementById("triTest3").style.WebkitTransform="translate(0px, 200px)";
 
 }
+function rotate2(){
+document.getElementById("triTest4").style.WebkitTransform = "rotateY(130deg)";
+document.getElementById("triTest4").style.WebkitTransform="translate(-200px, 0px)";
+}	
 </script>
 <style>
+
 #triTest{
 width: 0;
 height: 0;
 line-height:120px;
-border-left: 50px solid transparent;
-border-right: 50px solid transparent;
-border-bottom: 100px solid red;
-margin-left:100px;
+border-left: 283px solid transparent;
+border-right: 283px solid transparent;
+border-bottom: 205px solid red;
+margin-left: -115px;
 position: absolute;
 z-index:1;
+-webkit-transform: rotateX(180deg) ;
+transition: 2s;
 <!---webkit-transform: perspective(400px) rotateX(25deg)-->
 }
 #triTest3{
 width: 0;
-height: 0;
-line-height:120px;
-border-left: 50px solid transparent;
-border-right: 50px solid transparent;
-border-bottom: 100px solid pink;
+	height: 0;
+	border-left: 283px solid transparent;
+	border-right: 283px solid transparent;
+	border-top: 200px solid pink;
+	line-height:20px;
+margin-left: -115px;
 position: absolute;
-margin-left:100px;
-margin-top:198px;
-z-index:1;
--webkit-transform: rotate(180deg);
--moz-transform: rotate(180deg);
--o-transform: rotate(180deg);
--ms-transform: rotate(180deg);
-transform: rotate(180deg);
+z-index:6;
+margin-top:200px;
+-webkit-transform: rotateX(180deg) ;
+transition: 4s;
 <!---webkit-transform: perspective(400px) rotateX(25deg)-->
 }
 #triTest4{
 width: 0;
 height: 0;
 line-height:120px;
-border-left: 50px solid transparent;
-border-right: 50px solid transparent;
-border-bottom: 100px solid brown;
+border-left: 200px solid transparent;
+border-right: 200px solid transparent;
+border-bottom: 280px solid brown;
 position: absolute;
 z-index:1;
-margin-left:0px;
-margin-top:99px;
-<!---webkit-transform: perspective(400px) rotateX(25deg)-->
--webkit-transform: rotate(270deg);
--moz-transform: rotate(270deg);
--o-transform: rotate(270deg);
--ms-transform: rotate(1270deg);
-transform: rotate(270deg);
+margin-left:-174px;
+margin-top:60px;
+-webkit-transform: rotateY(270deg) ;
+transition: 2s;
+<!---webkit-transform: perspective(400px) rotateY(80deg)-->
+-webkit-transform: rotate(90deg);
+-moz-transform: rotate(90deg);
+-o-transform: rotate(90deg);
+-ms-transform: rotate(90deg);
+transform: rotate(90deg);
 }
 #triTest2{
 width: 0;
 height: 0;
 line-height:120px;
-border-left: 50px solid transparent;
-border-right: 50px solid transparent;
-border-bottom: 100px solid darkred;
+border-left: 283px solid transparent;
+border-right: 283px solid transparent;
+border-bottom: 168px solid darkred;
 position: absolute;
 z-index:1;
 margin-left:200px;
@@ -74,34 +85,38 @@ margin-top:99px;
 -o-transform: rotate(90deg);
 -ms-transform: rotate(90deg);
 transform: rotate(90deg);
+display:none;
 }
 #triTest, #triTest2,#triTest3, #triTest4{
 color: white;
 }
 #base{
-width:100px;
-height: 100px;
+width:565px;
+height: 400px;
 color:white;
 background-color: black;
-z-index:1;
+z-index:-1;
 position:absolute;
-margin-top:98px;
-margin-left:100px;
-line-height: 100px;
+margin-left:-114px;
+line-height: 400px;
 }
-
+#triHolder{
+	margin-left: 475px;
+	margin-top: 80px;
+}
 </style>
+
 </head>
-<button onclick="folds()">Unfold</button>
+<button onclick="rotate2()">Click This </button>
 <body>
-<div id="triHolder">
-<div id="triTest" >1</div>
+<div id="checkTrans" style="text-align:right">afda</div>
+<div id="triHolder" >
+<div id="triTest"onclick="rotate()" >1</div>
 <div id="triTest2">2</div>
 <div id="base"> <center>Base</center></div>
-<div id="triTest3" onclick="myFunction()" >3</div>
+<div id="triTest3" onclick="rotate2()" >3</div>
 <div id="triTest4" onclick="myFunction()" >4</div>
 </div>
 </body>
-
 
 </html>
